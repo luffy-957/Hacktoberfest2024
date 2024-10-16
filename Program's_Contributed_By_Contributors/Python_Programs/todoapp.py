@@ -33,6 +33,10 @@ class TodoListApp(QMainWindow):
         self.remove_button.clicked.connect(self.remove_task)
         self.layout.addWidget(self.remove_button)
 
+        self.clear_button = QPushButton("Clear All")
+        self.clear_button.clicked.connect(self.clear_all_tasks)
+        self.layout.addWidget(self.clear_button)
+
         self.update_task_list()
 
     def add_task(self):
